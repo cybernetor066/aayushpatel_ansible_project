@@ -1,0 +1,72 @@
+---
+  # tasks file for role01
+  - name: "Echo operation (Task1)"
+    shell: echo "Hello DevOps World!"
+    register: "output_var"
+
+  - name: "Debug setting (Task2)"
+    debug:
+      var: "output_var.stdout_lines"
+      # verbosity: 2
+
+  # Start main operatons
+  # # INSTALLING PACKAGES
+  # - name: Update apt
+  #   apt:
+  #     update_cache: yes
+
+
+
+  # Deploy folder/directory
+  - name: "Creating a directory if it does not exist Task3 (2)"
+    ansible.builtin.file:
+      path: ~/temp_folder01
+      state: directory
+      mode: '0755'
+
+  - name: Copy cron script file with owner and permissions
+    ansible.builtin.copy:
+      src: /home/cybernetor066/Desktop/Freelance-Projects/AayushPatel-Ansible-Project/miscs/ansible_roles
+      dest: ~/temp_folder01/
+      mode: '0755'
+
+
+
+
+  # Deploy files
+  - name: Copy cron script file with owner and permissions
+    ansible.builtin.copy:
+      src: /home/cybernetor066/Desktop/Freelance-Projects/AayushPatel-Ansible-Project/miscs/ansible_roles/roles/role01/tasks/main.yml
+      dest: ~/temp_folder01/
+      mode: '0755'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

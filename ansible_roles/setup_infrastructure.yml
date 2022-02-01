@@ -1,0 +1,36 @@
+---
+  - name: "Running shell scripts in remote hosts"
+    become: true
+    # hosts: localhost_server
+    hosts: docker_servers_ssh
+    # hosts: remote_servers_ssh
+
+    roles:
+      - role01
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,13 +18,13 @@
 
 
   # Deploy folder/directory
-  - name: "Creating a directory if it does not exist Task3 (2)"
+  - name: "Creating a directory if it does not exist"
     ansible.builtin.file:
       path: ~/temp_folder01
       state: directory
       mode: '0755'
 
-  - name: Copy cron script file with owner and permissions
+  - name: Copy cron folder with owner and permissions
     ansible.builtin.copy:
       src: /home/cybernetor066/Desktop/Freelance-Projects/AayushPatel-Ansible-Project/miscs/ansible_roles
       dest: ~/temp_folder01/
@@ -34,7 +34,7 @@
 
 
   # Deploy files
-  - name: Copy cron script file with owner and permissions
+  - name: Copy file with owner and permissions
     ansible.builtin.copy:
       src: /home/cybernetor066/Desktop/Freelance-Projects/AayushPatel-Ansible-Project/miscs/ansible_roles/roles/role01/tasks/main.yml
       dest: ~/temp_folder01/
